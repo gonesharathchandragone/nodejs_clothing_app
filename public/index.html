@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Threads & Co. | Clothing Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>👕 Threads & Co.</h1>
+    <div class="cart-icon" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="filters">
+      <button onclick="loadProducts()" class="active">All</button>
+      <button onclick="loadProducts('Tops')">Tops</button>
+      <button onclick="loadProducts('Bottoms')">Bottoms</button>
+      <button onclick="loadProducts('Dresses')">Dresses</button>
+      <button onclick="loadProducts('Outerwear')">Outerwear</button>
+      <button onclick="loadProducts('Shoes')">Shoes</button>
+      <button onclick="loadProducts('Accessories')">Accessories</button>
+    </div>
+    <div id="products" class="grid"></div>
+  </main>
+
+  <!-- Cart sidebar -->
+  <aside id="cart-panel" class="cart-panel">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">Total: $<span id="cart-total">0.00</span></div>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    <button class="close-btn" onclick="toggleCart()">Close</button>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
