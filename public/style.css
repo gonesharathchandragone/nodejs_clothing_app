@@ -1,0 +1,151 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: #f7f7f9;
+  color: #222;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1e1e2f;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cart-icon {
+  cursor: pointer;
+  font-size: 1.4rem;
+  background: #33334d;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+main { padding: 2rem; max-width: 1200px; margin: 0 auto; }
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters button:hover, .filters button.active {
+  background: #1e1e2f;
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card .emoji { font-size: 3.5rem; }
+
+.card h3 { margin: 0.5rem 0; font-size: 1rem; }
+
+.card .price { color: #e63946; font-weight: bold; font-size: 1.2rem; margin: 0.5rem 0; }
+
+.card .category { font-size: 0.75rem; text-transform: uppercase; color: #888; }
+
+.card button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card button:hover { background: #33334d; }
+
+.cart-panel {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 340px;
+  height: 100%;
+  background: white;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+  padding: 1.5rem;
+  transition: right 0.3s;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.cart-panel.open { right: 0; }
+
+.cart-items { flex: 1; overflow-y: auto; margin: 1rem 0; }
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.cart-total { font-weight: bold; font-size: 1.2rem; padding: 1rem 0; }
+
+.checkout-btn {
+  padding: 0.75rem;
+  background: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.close-btn {
+  padding: 0.5rem;
+  background: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #1e1e2f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
