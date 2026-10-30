@@ -1,5 +1,5 @@
 [
-  { "id": 1, "name": "Classic White T-Shirt", "category": "Tops", "price": 19.99, "size": ["S","M","L","XL"], "image": "👕" },
+  { "id": 1, "name": "Classic Green T-Shirt", "category": "Tops", "price": 19.99, "size": ["S","M","L","XL"], "image": "👕" },
   { "id": 2, "name": "Blue Denim Jeans", "category": "Bottoms", "price": 49.99, "size": ["30","32","34","36"], "image": "👖" },
   { "id": 3, "name": "Summer Floral Dress", "category": "Dresses", "price": 39.99, "size": ["S","M","L"], "image": "👗" },
   { "id": 4, "name": "Leather Jacket", "category": "Outerwear", "price": 89.99, "size": ["M","L","XL"], "image": "🧥" },
